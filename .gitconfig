@@ -1,0 +1,39 @@
+[user]
+	name = Furkan Karakoyunlu
+	username = spootrick
+	email = myoiatr@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = auto
+[alias]
+	# if there is ! at the beginning, git treats it as a bash command.
+	hello = "!echo \"Hello world!\""
+
+	# one-line log with date
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	# list commits showing changed files 
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	# list one line commits with relative dates
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	# show file log
+	fl = log -u
+	# log tree
+	logtree = log --graph --oneline --decorate --all
+
+	# diff
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+	a = add
+	br = branch
+	co = checkout
+	cb = checkout -b
+	cm = commit -m
+	cl = clone
+	st = status
+
+	# list aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+
