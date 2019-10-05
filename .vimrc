@@ -9,7 +9,7 @@ set ruler                       " Enable ruler
 set hidden                      " See :help hidden or see: https://medium.com/usevim/vim-101-set-hidden-f78800142855
 set wildmenu                    " Better command line completion
 set laststatus=2                " Always display the status line, even if only one window is displayed
-set cmdheight=2                 " Set height of the command bar
+set cmdheight=1                 " Set height of the command bar
 set scrolloff=7                 " Set 7 lines to the cursor when moving vertically
 set autoread                    " Set to auto read when file is changed from outside
 set linebreak                   " Set linebreaks
@@ -46,6 +46,10 @@ set hlsearch                    " Highlight found searches
 set ignorecase                  " Search case insensitive...
 set smartcase                   " ... but not when search pattern contains upper case characters
 set magic                       " Regex magic
+
+" Whitespace chars
+set list                        " Enable list mode
+set listchars=tab:»\ ,trail:·,nbsp:⎵,precedes:<,extends:> " List mode custom character settings
 
 " Comfort Zone
 set noerrorbells                " No annoying error bells
